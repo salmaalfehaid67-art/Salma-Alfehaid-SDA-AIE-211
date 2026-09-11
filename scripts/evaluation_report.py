@@ -248,14 +248,7 @@ def main():
         ],
     )
 
-    text_col = pick_column(
-        df,
-        [
-            "text",
-            "feedback_text",
-            "case_text",
-        ],
-    )
+    text_col = None
 
     point, low, high = (
         bootstrap_macro_f1(

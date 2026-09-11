@@ -317,7 +317,7 @@ def main():
             tokenized["train"],
         eval_dataset=
             tokenized["validation"],
-        tokenizer=tokenizer,
+        processing_class=tokenizer,
         data_collator=
             DataCollatorForTokenClassification(
                 tokenizer=tokenizer

@@ -14,11 +14,41 @@ SMOKE_SET = Path("data/eval/qa_smoke_set.json")
 
 
 def load_smoke_set():
-    return json.loads(
+    raw = json.loads(
         SMOKE_SET.read_text(
             encoding="utf-8"
         )
     )
+
+    examples = []
+
+    for item in raw["data"]:
+        for paragraph in item["paragraphs"]:
+            context = paragraph["context"]
+
+            for qa in paragraph["qas"]:
+                answers = qa.get("answers", [])
+
+                if (
+                    qa.get("is_impossible", False)
+                    or not answers
+                ):
+                    expected_answer = None
+                else:
+                    expected_answer = answers[0]["text"]
+
+                examples.append({
+                    "id": qa["id"],
+                    "question": qa["question"],
+                    "context": context,
+                    "answer": expected_answer,
+                    "is_impossible": qa.get(
+                        "is_impossible",
+                        False
+                    ),
+                })
+
+    return examples
 
 
 def extract_answer(

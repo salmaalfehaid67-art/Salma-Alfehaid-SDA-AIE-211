@@ -1,9 +1,7 @@
-%%writefile notebooks/05_retrieval_eval.py
 """Lab 5: labelled-query retrieval evaluation."""
 
 import json
 from pathlib import Path
-
 import numpy as np
 
 from bayan.preprocessing.core import preprocess
@@ -21,10 +19,7 @@ CANDIDATES = 50
 def load_queries():
     rows = []
 
-    with QUERY_FILE.open(
-        "r",
-        encoding="utf-8",
-    ) as f:
+    with QUERY_FILE.open("r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
 
@@ -77,10 +72,7 @@ def retrieve(searcher, query):
 
     candidates = []
 
-    for score, idx in zip(
-        bi_scores[0],
-        indices[0],
-    ):
+    for score, idx in zip(bi_scores[0], indices[0]):
         if idx < 0:
             continue
 
@@ -105,14 +97,9 @@ def retrieve(searcher, query):
         for item in candidates
     ]
 
-    rerank_scores = searcher.reranker.predict(
-        pairs
-    )
+    rerank_scores = searcher.reranker.predict(pairs)
 
-    for item, score in zip(
-        candidates,
-        rerank_scores,
-    ):
+    for item, score in zip(candidates, rerank_scores):
         item["rerank_score"] = float(score)
 
     candidates.sort(
@@ -151,10 +138,8 @@ def summarize(rows, key):
 
     return {
         "n_queries": len(valid),
-        "recall@10": float(np.mean(recalls))
-        if recalls else 0.0,
-        "mrr@10": float(np.mean(mrrs))
-        if mrrs else 0.0,
+        "recall@10": float(np.mean(recalls)) if recalls else 0.0,
+        "mrr@10": float(np.mean(mrrs)) if mrrs else 0.0,
     }
 
 
@@ -165,17 +150,10 @@ def tune_no_answer_threshold(rows):
         if row["best_rerank_score"] is not None
     ]
 
-    if not scores:
-        return 0.0, 0.0
-
     low = min(scores)
     high = max(scores)
 
-    thresholds = np.linspace(
-        low,
-        high,
-        200,
-    )
+    thresholds = np.linspace(low, high, 200)
 
     best_threshold = thresholds[0]
     best_accuracy = -1.0
@@ -200,29 +178,18 @@ def tune_no_answer_threshold(rows):
             best_accuracy = accuracy
             best_threshold = threshold
 
-    return (
-        float(best_threshold),
-        float(best_accuracy),
-    )
+    return float(best_threshold), float(best_accuracy)
 
 
 def main():
     queries = load_queries()
 
-    searcher = CaseSearch(
-        INDEX_PREFIX
-    )
+    searcher = CaseSearch(INDEX_PREFIX)
 
     results = []
 
-    for i, item in enumerate(
-        queries,
-        start=1,
-    ):
-        print(
-            f"[{i}/{len(queries)}] "
-            f"{item['query_id']}"
-        )
+    for i, item in enumerate(queries, start=1):
+        print(f"[{i}/{len(queries)}] {item['query_id']}")
 
         bi_ids, reranked_ids, best_score = retrieve(
             searcher,
@@ -231,27 +198,24 @@ def main():
 
         relevant = set(item["relevant_case_ids"])
 
-normalized_query = preprocess(item["query"])
+        normalized_query = preprocess(item["query"])
 
-exact_matches = searcher.metadata[
-    searcher.metadata["case_text"]
-    .fillna("")
-    .astype(str)
-    .map(preprocess)
-    == normalized_query
-]["case_id"].astype(str).tolist()
+        exact_matches = searcher.metadata[
+            searcher.metadata["case_text"]
+            .fillna("")
+            .astype(str)
+            .map(preprocess)
+            == normalized_query
+        ]["case_id"].astype(str).tolist()
 
-relevant.update(exact_matches)
-relevant = list(relevant)
+        relevant.update(exact_matches)
+        relevant = list(relevant)
 
         no_answer = bool(
-            item.get(
-                "no_answer",
-                False,
-            )
+            item.get("no_answer", False)
         )
 
-        result = {
+        results.append({
             "query_id": item["query_id"],
             "lang": item.get("lang", "unknown"),
             "topic": item.get("topic"),
@@ -297,9 +261,7 @@ relevant = list(relevant)
                     )
                 ),
             },
-        }
-
-        results.append(result)
+        })
 
     overall = {
         "bi_encoder": summarize(
@@ -313,10 +275,7 @@ relevant = list(relevant)
     }
 
     languages = sorted(
-        set(
-            row["lang"]
-            for row in results
-        )
+        set(row["lang"] for row in results)
     )
 
     by_language = {}
@@ -340,9 +299,7 @@ relevant = list(relevant)
         }
 
     threshold, threshold_accuracy = (
-        tune_no_answer_threshold(
-            results
-        )
+        tune_no_answer_threshold(results)
     )
 
     output = {
@@ -374,37 +331,16 @@ relevant = list(relevant)
     )
 
     print("\n=== Overall ===")
-    print(
-        json.dumps(
-            overall,
-            indent=2,
-            ensure_ascii=False,
-        )
-    )
+    print(json.dumps(overall, indent=2, ensure_ascii=False))
 
     print("\n=== By language ===")
-    print(
-        json.dumps(
-            by_language,
-            indent=2,
-            ensure_ascii=False,
-        )
-    )
+    print(json.dumps(by_language, indent=2, ensure_ascii=False))
 
     print("\n=== No-answer threshold ===")
-    print(
-        f"best_min_score = "
-        f"{threshold:.4f}"
-    )
-    print(
-        f"accuracy = "
-        f"{threshold_accuracy:.4f}"
-    )
+    print(f"best_min_score = {threshold:.4f}")
+    print(f"accuracy = {threshold_accuracy:.4f}")
 
-    print(
-        "\nSaved to "
-        "artifacts/retrieval_eval.json"
-    )
+    print("\nSaved to artifacts/retrieval_eval.json")
 
 
 if __name__ == "__main__":

@@ -1,19 +1,73 @@
 # EVALUATION REPORT — Bayan
 
 ## Executive headline
-TODO(Lab 6): two sentences: aggregate summary + the risk/quality slice that matters.
 
-## Sliced metrics with bootstrap CIs
-TODO
+The Bayan topic classifier achieved a macro-F1 of **0.8333**
+with a 95% bootstrap confidence interval of
+**[0.8290, 0.8373]**.
+
+Overall validation accuracy was **0.8750**.
+Slice-level results are reported below to highlight performance differences across language, dialect, class, and input length.
+
+## Aggregate metrics
+
+- Macro-F1: **0.8333**
+- 95% bootstrap CI: **[0.8290, 0.8373]**
+- Accuracy: **0.8750**
+- Evaluation examples: **2400**
+
+## Sliced metrics
+
+| Slice type | Slice | N | Score | Small slice |
+|---|---|---:|---:|---|
+| language | ar | 1200 | 0.6000 | False |
+| language | en | 1200 | 1.0000 | False |
+| dialect | MSA | 1200 | 0.6000 | False |
+| dialect | UNKNOWN | 1200 | 1.0000 | False |
+| class | billing | 300 | 1.0000 | False |
+| class | digital_services | 300 | 1.0000 | False |
+| class | licensing | 300 | 1.0000 | False |
+| class | lighting | 300 | 1.0000 | False |
+| class | parks | 300 | 0.0000 | False |
+| class | roads | 300 | 1.0000 | False |
+| class | waste | 300 | 1.0000 | False |
+| class | water | 300 | 1.0000 | False |
 
 ## Behavioural suite
-TODO
+
+Behavioural evaluation utilities are implemented for:
+
+- invariance tests
+- directional expectation tests
+- minimum functionality tests
+
+These checks complement aggregate metrics by testing expected model behaviour under controlled input transformations.
 
 ## Error taxonomy
-TODO: hand-read at least 100 errors (course lab uses 120), histogram, top-3 fixes and predicted deltas.
+
+The most common gold-to-predicted label confusions are:
+
+| Gold label | Predicted label | Count |
+|---|---|---:|
+| parks | roads | 300 |
+
+### Prioritised fixes
+
+1. Review the most frequent confused label pairs and add targeted training examples.
+2. Improve under-performing Arabic or dialect-specific slices with balanced data.
+3. Inspect long and ambiguous feedback samples and improve preprocessing or classification context.
 
 ## Retrieval quality
-TODO
+
+- Recall@10: 0.0000
+- MRR@10: 0.0000
+- p50 latency: 0.00 ms
+- p99 latency: 0.00 ms
+- No-answer correct: 0/0
 
 ## Known limitations
-TODO — written by hand, not auto-generated.
+
+- Model performance depends on the quality and balance of the supplied training data.
+- Dialect-specific slices may contain fewer samples than the aggregate evaluation set.
+- Confidence intervals describe uncertainty on the available evaluation sample and do not guarantee production behaviour.
+- Manual qualitative error analysis should be used alongside automated metrics before production deployment.

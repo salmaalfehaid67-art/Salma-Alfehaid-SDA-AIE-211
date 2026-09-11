@@ -1,129 +1,264 @@
-"""Lab 2: parameter accounting for mBERT and CAMeLBERT."""
+"""Lab 7: benchmark ONNX classifier inference latency."""
 
-from transformers import AutoModel
+import json
+import time
+from pathlib import Path
 
-
-def classify_parameter(name: str) -> str:
-    name = name.lower()
-
-    if "embeddings" in name:
-        return "embeddings"
-
-    if (
-        "attention" in name
-        or "query" in name
-        or "key" in name
-        or "value" in name
-    ):
-        return "attention"
-
-    if (
-        "intermediate" in name
-        or "output.dense" in name
-    ):
-        return "ffn"
-
-    if (
-        "layernorm" in name
-        or "layer_norm" in name
-    ):
-        return "norms"
-
-    if "pooler" in name:
-        return "pooler"
-
-    return "other"
+import numpy as np
+import onnxruntime as ort
+from transformers import AutoTokenizer
 
 
-def audit(checkpoint: str) -> dict:
-    model = AutoModel.from_pretrained(
-        checkpoint
+FP32_DIR = Path("artifacts/onnx/classifier_fp32")
+INT8_DIR = Path("artifacts/onnx/classifier_int8")
+MIX_PATH = Path("data/serving/bench_mix.npy")
+OUTPUT_PATH = Path("artifacts/inference_benchmark.json")
+
+WARMUP_RUNS = 20
+THREADS = 1
+
+
+def load_benchmark_texts():
+    if MIX_PATH.exists():
+        arr = np.load(
+            MIX_PATH,
+            allow_pickle=True,
+        )
+
+        arr = np.asarray(arr).reshape(-1)
+
+        return [
+            str(x)
+            for x in arr[:200]
+        ]
+
+    lengths = [
+        16, 32, 64, 96,
+        128, 32, 64, 16,
+    ] * 20
+
+    return [
+        make_text(length)
+        for length in lengths
+    ]
+
+
+def make_text(length):
+    words = [
+        "بلاغ",
+        "خدمة",
+        "طريق",
+        "مياه",
+        "إنارة",
+        "طلب",
+        "مشكلة",
+        "الرياض",
+    ]
+
+    tokens = [
+        words[i % len(words)]
+        for i in range(length)
+    ]
+
+    return " ".join(tokens)
+
+
+def create_session(model_path):
+    options = ort.SessionOptions()
+
+    options.intra_op_num_threads = THREADS
+    options.inter_op_num_threads = THREADS
+
+    return ort.InferenceSession(
+        str(model_path),
+        sess_options=options,
+        providers=["CPUExecutionProvider"],
     )
 
-    buckets = {
-        "embeddings": 0,
-        "attention": 0,
-        "ffn": 0,
-        "norms": 0,
-        "pooler": 0,
-        "other": 0,
+
+def benchmark(model_path, tokenizer, texts):
+    session = create_session(model_path)
+
+    input_names = {
+        item.name
+        for item in session.get_inputs()
     }
 
-    total = 0
+    warm_text = "بلاغ خدمة طريق مياه إنارة طلب مشكلة الرياض"
 
-    for name, parameter in model.named_parameters():
-        count = parameter.numel()
+    warm = tokenizer(
+        warm_text,
+        return_tensors="np",
+        truncation=True,
+        max_length=256,
+    )
 
-        total += count
-
-        bucket = classify_parameter(
-            name
-        )
-
-        buckets[bucket] += count
-
-    result = {
-        "checkpoint": checkpoint,
-        "total_parameters": total,
-        "buckets": {},
+    warm_inputs = {
+        key: value.astype("int64")
+        for key, value in warm.items()
+        if key in input_names
     }
 
-    for bucket, count in buckets.items():
-        percentage = (
-            100.0 * count / total
-            if total
-            else 0.0
+    for _ in range(WARMUP_RUNS):
+        session.run(
+            None,
+            warm_inputs,
         )
 
-        result["buckets"][bucket] = {
-            "parameters": count,
-            "percentage": round(
-                percentage,
-                2,
-            ),
+    latencies = []
+
+    for text_item in texts:
+        encoded = tokenizer(
+            str(text_item),
+            return_tensors="np",
+            truncation=True,
+            max_length=256,
+        )
+
+        inputs = {
+            key: value.astype("int64")
+            for key, value in encoded.items()
+            if key in input_names
         }
 
-    return result
+        start_time = time.perf_counter()
 
-
-def print_report(result):
-    print(
-        "\nCheckpoint:",
-        result["checkpoint"],
-    )
-
-    print(
-        "Total parameters:",
-        f"{result['total_parameters']:,}",
-    )
-
-    print(
-        "-" * 55
-    )
-
-    for bucket, values in result[
-        "buckets"
-    ].items():
-
-        print(
-            f"{bucket:12s}"
-            f"{values['parameters']:>15,}"
-            f"   "
-            f"{values['percentage']:>6.2f}%"
+        session.run(
+            None,
+            inputs,
         )
+
+        elapsed_ms = (
+            time.perf_counter() - start_time
+        ) * 1000.0
+
+        latencies.append(elapsed_ms)
+
+    return {
+        "runs": len(latencies),
+        "p50_ms": float(
+            np.percentile(latencies, 50)
+        ),
+        "p99_ms": float(
+            np.percentile(latencies, 99)
+        ),
+        "mean_ms": float(
+            np.mean(latencies)
+        ),
+    }
+
+
+def main():
+    fp32_model = (
+        FP32_DIR / "model.onnx"
+    )
+
+    int8_model = (
+        INT8_DIR / "model_quantized.onnx"
+    )
+
+    if not fp32_model.exists():
+        raise FileNotFoundError(
+            fp32_model
+        )
+
+    if not int8_model.exists():
+        raise FileNotFoundError(
+            int8_model
+        )
+
+    tokenizer = AutoTokenizer.from_pretrained(
+        FP32_DIR
+    )
+
+    texts = load_benchmark_texts()
+
+    print(
+        f"Benchmark samples: {len(texts)}"
+    )
+
+    print("\nBenchmarking FP32...")
+    fp32 = benchmark(
+        fp32_model,
+        tokenizer,
+        texts,
+    )
+
+    print("\nBenchmarking INT8...")
+    int8 = benchmark(
+        int8_model,
+        tokenizer,
+        texts,
+    )
+
+    speedup_p50 = (
+        fp32["p50_ms"]
+        / int8["p50_ms"]
+        if int8["p50_ms"] > 0
+        else None
+    )
+
+    speedup_p99 = (
+        fp32["p99_ms"]
+        / int8["p99_ms"]
+        if int8["p99_ms"] > 0
+        else None
+    )
+
+    output = {
+        "threads": THREADS,
+        "warmup_runs": WARMUP_RUNS,
+        "fp32": fp32,
+        "int8": int8,
+        "speedup_p50": speedup_p50,
+        "speedup_p99": speedup_p99,
+    }
+
+    OUTPUT_PATH.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    OUTPUT_PATH.write_text(
+        json.dumps(
+            output,
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    print("\n=== FP32 ===")
+    print(
+        json.dumps(
+            fp32,
+            indent=2,
+        )
+    )
+
+    print("\n=== INT8 ===")
+    print(
+        json.dumps(
+            int8,
+            indent=2,
+        )
+    )
+
+    print("\n=== Speedup ===")
+    print(
+        f"p50 speedup: "
+        f"{speedup_p50:.2f}x"
+    )
+    print(
+        f"p99 speedup: "
+        f"{speedup_p99:.2f}x"
+    )
+
+    print(
+        "\nSaved to "
+        "artifacts/inference_benchmark.json"
+    )
 
 
 if __name__ == "__main__":
-    checkpoints = [
-        "bert-base-multilingual-cased",
-        "CAMeL-Lab/bert-base-arabic-camelbert-mix",
-    ]
-
-    for checkpoint in checkpoints:
-        result = audit(
-            checkpoint
-        )
-
-        print_report(
-            result
-        )
+    main()
