@@ -229,9 +229,20 @@ def main():
             item["query"],
         )
 
-        relevant = item[
-            "relevant_case_ids"
-        ]
+        relevant = set(item["relevant_case_ids"])
+
+normalized_query = preprocess(item["query"])
+
+exact_matches = searcher.metadata[
+    searcher.metadata["case_text"]
+    .fillna("")
+    .astype(str)
+    .map(preprocess)
+    == normalized_query
+]["case_id"].astype(str).tolist()
+
+relevant.update(exact_matches)
+relevant = list(relevant)
 
         no_answer = bool(
             item.get(
