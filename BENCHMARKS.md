@@ -19,12 +19,13 @@
 | TF-IDF + LinearSVC | macro-F1 | 1.0000 | 1.0000 | N/A |
 | Topic classifier | macro-F1 | 1.0000 | 0.9958 | N/A |
 | NER | entity-F1 | 1.0000 | N/A | ~54 min |
-| QA | span/null smoke | N/A | N/A | N/A |
+| QA | span/null smoke | 12/12 passed | N/A | ~9 min |
 
 ### Notes
 - Topic classifier checkpoint: `CAMeL-Lab/bert-base-arabic-camelbert-mix`
 - Topic classifier frozen-test accuracy: 0.9958
-- QA smoke evaluation was not run because the required QA checkpoint was not available at `artifacts/qa`.
+- QA smoke test passed all 12 provided answerable cases.
+- The current QA smoke set did not include null/no-answer cases.
 
 ## Lab 4 — Arabic model bake-off
 | Checkpoint | macro-F1 all | Gulf | MSA | AR fertility |
