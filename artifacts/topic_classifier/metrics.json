@@ -1,0 +1,31 @@
+{
+  "model": "CAMeL-Lab/bert-base-arabic-camelbert-mix",
+  "validation": {
+    "eval_loss": 0.0010454528965055943,
+    "eval_accuracy": 1.0,
+    "eval_macro_f1": 1.0,
+    "eval_runtime": 135.0597,
+    "eval_samples_per_second": 9.011,
+    "eval_steps_per_second": 1.133,
+    "epoch": 2.0
+  },
+  "test": {
+    "eval_loss": 0.009149540215730667,
+    "eval_accuracy": 0.9958471760797342,
+    "eval_macro_f1": 0.9957954161176823,
+    "eval_runtime": 275.1406,
+    "eval_samples_per_second": 8.752,
+    "eval_steps_per_second": 1.094,
+    "epoch": 2.0
+  },
+  "labels": [
+    "billing",
+    "digital_services",
+    "licensing",
+    "lighting",
+    "parks",
+    "roads",
+    "waste",
+    "water"
+  ]
+}

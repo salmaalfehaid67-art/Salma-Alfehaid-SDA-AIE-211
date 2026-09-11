@@ -1,0 +1,6 @@
+{
+  "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "preproc_version": "1.2.0",
+  "n_vectors": 20000,
+  "dim": 384
+}

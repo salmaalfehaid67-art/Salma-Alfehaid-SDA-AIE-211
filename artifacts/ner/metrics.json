@@ -1,0 +1,30 @@
+{
+  "model": "CAMeL-Lab/bert-base-arabic-camelbert-mix",
+  "labels": [
+    "B-DATE",
+    "B-LOCATION",
+    "B-REFERENCE",
+    "B-SERVICE",
+    "O"
+  ],
+  "validation": {
+    "eval_loss": 4.102557431906462e-05,
+    "eval_precision": 1.0,
+    "eval_recall": 1.0,
+    "eval_f1": 1.0,
+    "eval_runtime": 59.4612,
+    "eval_samples_per_second": 6.727,
+    "eval_steps_per_second": 0.841,
+    "epoch": 2.0
+  },
+  "test": {
+    "eval_loss": 4.111119415028952e-05,
+    "eval_precision": 1.0,
+    "eval_recall": 1.0,
+    "eval_f1": 1.0,
+    "eval_runtime": 59.5399,
+    "eval_samples_per_second": 6.718,
+    "eval_steps_per_second": 0.84,
+    "epoch": 2.0
+  }
+}

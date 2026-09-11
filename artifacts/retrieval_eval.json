@@ -1,0 +1,2297 @@
+{
+  "overall": {
+    "bi_encoder": {
+      "n_queries": 130,
+      "recall@10": 0.21938799323786337,
+      "mrr@10": 0.8102564102564103
+    },
+    "reranked": {
+      "n_queries": 130,
+      "recall@10": 0.17515460725484044,
+      "mrr@10": 0.5429334554334554
+    }
+  },
+  "by_language": {
+    "ar": {
+      "bi_encoder": {
+        "n_queries": 60,
+        "recall@10": 0.21960751452783608,
+        "mrr@10": 0.8055555555555555
+      },
+      "reranked": {
+        "n_queries": 60,
+        "recall@10": 0.19845671979332258,
+        "mrr@10": 0.6609722222222222
+      }
+    },
+    "en": {
+      "bi_encoder": {
+        "n_queries": 70,
+        "recall@10": 0.21919983213217245,
+        "mrr@10": 0.8142857142857143
+      },
+      "reranked": {
+        "n_queries": 70,
+        "recall@10": 0.1551813679361415,
+        "mrr@10": 0.4417573696145125
+      }
+    }
+  },
+  "no_answer": {
+    "best_min_score": -5.498021839851111,
+    "classification_accuracy": 1.0,
+    "n_no_answer": 20
+  },
+  "queries": [
+    {
+      "query_id": "Q-001",
+      "lang": "ar",
+      "topic": "roads",
+      "no_answer": false,
+      "best_rerank_score": 6.602874755859375,
+      "bi_encoder": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-002",
+      "lang": "ar",
+      "topic": "lighting",
+      "no_answer": false,
+      "best_rerank_score": 9.305536270141602,
+      "bi_encoder": {
+        "recall@10": 0.18181818181818182,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.18181818181818182,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-003",
+      "lang": "ar",
+      "topic": "waste",
+      "no_answer": false,
+      "best_rerank_score": 9.638104438781738,
+      "bi_encoder": {
+        "recall@10": 0.2127659574468085,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.1702127659574468,
+        "mrr@10": 0.3333333333333333
+      }
+    },
+    {
+      "query_id": "Q-004",
+      "lang": "ar",
+      "topic": "water",
+      "no_answer": false,
+      "best_rerank_score": 10.06285572052002,
+      "bi_encoder": {
+        "recall@10": 0.25,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-005",
+      "lang": "ar",
+      "topic": "billing",
+      "no_answer": false,
+      "best_rerank_score": 9.391602516174316,
+      "bi_encoder": {
+        "recall@10": 0.02577319587628866,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.02577319587628866,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-006",
+      "lang": "ar",
+      "topic": "digital_services",
+      "no_answer": false,
+      "best_rerank_score": 8.42188549041748,
+      "bi_encoder": {
+        "recall@10": 0.11494252873563218,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.11494252873563218,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-007",
+      "lang": "ar",
+      "topic": "licensing",
+      "no_answer": false,
+      "best_rerank_score": 9.429980278015137,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-008",
+      "lang": "ar",
+      "topic": "parks",
+      "no_answer": false,
+      "best_rerank_score": 10.564986228942871,
+      "bi_encoder": {
+        "recall@10": 0.21739130434782608,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.15217391304347827,
+        "mrr@10": 0.25
+      }
+    },
+    {
+      "query_id": "Q-009",
+      "lang": "ar",
+      "topic": "roads",
+      "no_answer": false,
+      "best_rerank_score": 5.016319274902344,
+      "bi_encoder": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-010",
+      "lang": "ar",
+      "topic": "lighting",
+      "no_answer": false,
+      "best_rerank_score": 10.224566459655762,
+      "bi_encoder": {
+        "recall@10": 0.20833333333333334,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.20833333333333334,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-011",
+      "lang": "ar",
+      "topic": "waste",
+      "no_answer": false,
+      "best_rerank_score": 10.226271629333496,
+      "bi_encoder": {
+        "recall@10": 0.18867924528301888,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.18867924528301888,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-012",
+      "lang": "ar",
+      "topic": "water",
+      "no_answer": false,
+      "best_rerank_score": 10.793002128601074,
+      "bi_encoder": {
+        "recall@10": 0.20408163265306123,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.20408163265306123,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-013",
+      "lang": "ar",
+      "topic": "billing",
+      "no_answer": false,
+      "best_rerank_score": -0.2226468026638031,
+      "bi_encoder": {
+        "recall@10": 0.6666666666666666,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.6666666666666666,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-014",
+      "lang": "ar",
+      "topic": "digital_services",
+      "no_answer": false,
+      "best_rerank_score": 10.465352058410645,
+      "bi_encoder": {
+        "recall@10": 0.14492753623188406,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.14492753623188406,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-015",
+      "lang": "ar",
+      "topic": "licensing",
+      "no_answer": false,
+      "best_rerank_score": 9.055474281311035,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-016",
+      "lang": "ar",
+      "topic": "parks",
+      "no_answer": false,
+      "best_rerank_score": 8.361454963684082,
+      "bi_encoder": {
+        "recall@10": 0.18518518518518517,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.18518518518518517,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-017",
+      "lang": "ar",
+      "topic": "roads",
+      "no_answer": false,
+      "best_rerank_score": 10.868459701538086,
+      "bi_encoder": {
+        "recall@10": 0.5714285714285714,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.5714285714285714,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-018",
+      "lang": "ar",
+      "topic": "lighting",
+      "no_answer": false,
+      "best_rerank_score": 9.903119087219238,
+      "bi_encoder": {
+        "recall@10": 0.20408163265306123,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.14285714285714285,
+        "mrr@10": 0.25
+      }
+    },
+    {
+      "query_id": "Q-019",
+      "lang": "ar",
+      "topic": "waste",
+      "no_answer": false,
+      "best_rerank_score": 9.616820335388184,
+      "bi_encoder": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-020",
+      "lang": "ar",
+      "topic": "water",
+      "no_answer": false,
+      "best_rerank_score": 10.141935348510742,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-021",
+      "lang": "ar",
+      "topic": "billing",
+      "no_answer": false,
+      "best_rerank_score": 9.989192962646484,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-022",
+      "lang": "ar",
+      "topic": "digital_services",
+      "no_answer": false,
+      "best_rerank_score": 10.37316608428955,
+      "bi_encoder": {
+        "recall@10": 0.5714285714285714,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.5714285714285714,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-023",
+      "lang": "ar",
+      "topic": "licensing",
+      "no_answer": false,
+      "best_rerank_score": 10.221388816833496,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-024",
+      "lang": "ar",
+      "topic": "parks",
+      "no_answer": false,
+      "best_rerank_score": 9.334410667419434,
+      "bi_encoder": {
+        "recall@10": 0.18518518518518517,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.18518518518518517,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-025",
+      "lang": "ar",
+      "topic": "roads",
+      "no_answer": false,
+      "best_rerank_score": 10.876953125,
+      "bi_encoder": {
+        "recall@10": 0.5,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-026",
+      "lang": "ar",
+      "topic": "lighting",
+      "no_answer": false,
+      "best_rerank_score": 9.90959644317627,
+      "bi_encoder": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-027",
+      "lang": "ar",
+      "topic": "waste",
+      "no_answer": false,
+      "best_rerank_score": 9.580231666564941,
+      "bi_encoder": {
+        "recall@10": 0.5714285714285714,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.5714285714285714,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-028",
+      "lang": "ar",
+      "topic": "water",
+      "no_answer": false,
+      "best_rerank_score": 10.665912628173828,
+      "bi_encoder": {
+        "recall@10": 0.20408163265306123,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.14285714285714285,
+        "mrr@10": 0.25
+      }
+    },
+    {
+      "query_id": "Q-029",
+      "lang": "ar",
+      "topic": "billing",
+      "no_answer": false,
+      "best_rerank_score": 10.386954307556152,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-030",
+      "lang": "ar",
+      "topic": "digital_services",
+      "no_answer": false,
+      "best_rerank_score": 9.30863094329834,
+      "bi_encoder": {
+        "recall@10": 0.11764705882352941,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.11764705882352941,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-031",
+      "lang": "ar",
+      "topic": "licensing",
+      "no_answer": false,
+      "best_rerank_score": 8.575024604797363,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-032",
+      "lang": "ar",
+      "topic": "parks",
+      "no_answer": false,
+      "best_rerank_score": 10.618788719177246,
+      "bi_encoder": {
+        "recall@10": 0.17857142857142858,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.17857142857142858,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-033",
+      "lang": "ar",
+      "topic": "roads",
+      "no_answer": false,
+      "best_rerank_score": 5.408189296722412,
+      "bi_encoder": {
+        "recall@10": 0.5714285714285714,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.5714285714285714,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-034",
+      "lang": "ar",
+      "topic": "lighting",
+      "no_answer": false,
+      "best_rerank_score": 8.676472663879395,
+      "bi_encoder": {
+        "recall@10": 0.18867924528301888,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.18867924528301888,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-035",
+      "lang": "ar",
+      "topic": "waste",
+      "no_answer": false,
+      "best_rerank_score": 10.468445777893066,
+      "bi_encoder": {
+        "recall@10": 0.16666666666666666,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.16666666666666666,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-036",
+      "lang": "ar",
+      "topic": "water",
+      "no_answer": false,
+      "best_rerank_score": 7.438823699951172,
+      "bi_encoder": {
+        "recall@10": 0.18518518518518517,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.18518518518518517,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-037",
+      "lang": "ar",
+      "topic": "billing",
+      "no_answer": false,
+      "best_rerank_score": 1.6051955223083496,
+      "bi_encoder": {
+        "recall@10": 0.25,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.25,
+        "mrr@10": 0.5
+      }
+    },
+    {
+      "query_id": "Q-038",
+      "lang": "ar",
+      "topic": "digital_services",
+      "no_answer": false,
+      "best_rerank_score": 10.042007446289062,
+      "bi_encoder": {
+        "recall@10": 0.13333333333333333,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.13333333333333333,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-039",
+      "lang": "ar",
+      "topic": "licensing",
+      "no_answer": false,
+      "best_rerank_score": 10.100356101989746,
+      "bi_encoder": {
+        "recall@10": 0.3333333333333333,
+        "mrr@10": 0.3333333333333333
+      },
+      "reranked": {
+        "recall@10": 0.3333333333333333,
+        "mrr@10": 0.2
+      }
+    },
+    {
+      "query_id": "Q-040",
+      "lang": "ar",
+      "topic": "parks",
+      "no_answer": false,
+      "best_rerank_score": 10.618788719177246,
+      "bi_encoder": {
+        "recall@10": 0.17857142857142858,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.17857142857142858,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-041",
+      "lang": "ar",
+      "topic": "roads",
+      "no_answer": false,
+      "best_rerank_score": 10.9094820022583,
+      "bi_encoder": {
+        "recall@10": 0.20408163265306123,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.1836734693877551,
+        "mrr@10": 0.5
+      }
+    },
+    {
+      "query_id": "Q-042",
+      "lang": "ar",
+      "topic": "lighting",
+      "no_answer": false,
+      "best_rerank_score": 9.463268280029297,
+      "bi_encoder": {
+        "recall@10": 0.5,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.5,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-043",
+      "lang": "ar",
+      "topic": "waste",
+      "no_answer": false,
+      "best_rerank_score": 10.62744426727295,
+      "bi_encoder": {
+        "recall@10": 0.18181818181818182,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.18181818181818182,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-044",
+      "lang": "ar",
+      "topic": "water",
+      "no_answer": false,
+      "best_rerank_score": 6.5485615730285645,
+      "bi_encoder": {
+        "recall@10": 0.17543859649122806,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.17543859649122806,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-045",
+      "lang": "ar",
+      "topic": "billing",
+      "no_answer": false,
+      "best_rerank_score": 9.391602516174316,
+      "bi_encoder": {
+        "recall@10": 0.02570694087403599,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.02570694087403599,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-046",
+      "lang": "ar",
+      "topic": "digital_services",
+      "no_answer": false,
+      "best_rerank_score": 10.845812797546387,
+      "bi_encoder": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-047",
+      "lang": "ar",
+      "topic": "licensing",
+      "no_answer": false,
+      "best_rerank_score": 10.58698558807373,
+      "bi_encoder": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-048",
+      "lang": "ar",
+      "topic": "parks",
+      "no_answer": false,
+      "best_rerank_score": 10.326720237731934,
+      "bi_encoder": {
+        "recall@10": 0.2702702702702703,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.08108108108108109,
+        "mrr@10": 0.125
+      }
+    },
+    {
+      "query_id": "Q-049",
+      "lang": "ar",
+      "topic": "roads",
+      "no_answer": false,
+      "best_rerank_score": 7.507986545562744,
+      "bi_encoder": {
+        "recall@10": 0.5714285714285714,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.5714285714285714,
+        "mrr@10": 0.5
+      }
+    },
+    {
+      "query_id": "Q-050",
+      "lang": "ar",
+      "topic": "lighting",
+      "no_answer": false,
+      "best_rerank_score": 8.663442611694336,
+      "bi_encoder": {
+        "recall@10": 0.17543859649122806,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.17543859649122806,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-051",
+      "lang": "ar",
+      "topic": "waste",
+      "no_answer": false,
+      "best_rerank_score": 10.62744426727295,
+      "bi_encoder": {
+        "recall@10": 0.18181818181818182,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.18181818181818182,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-052",
+      "lang": "ar",
+      "topic": "water",
+      "no_answer": false,
+      "best_rerank_score": 9.66512393951416,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-053",
+      "lang": "ar",
+      "topic": "billing",
+      "no_answer": false,
+      "best_rerank_score": -1.3640555143356323,
+      "bi_encoder": {
+        "recall@10": 0.136986301369863,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.136986301369863,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-054",
+      "lang": "ar",
+      "topic": "digital_services",
+      "no_answer": false,
+      "best_rerank_score": 9.645071029663086,
+      "bi_encoder": {
+        "recall@10": 0.10869565217391304,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.10869565217391304,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-055",
+      "lang": "ar",
+      "topic": "licensing",
+      "no_answer": false,
+      "best_rerank_score": 4.585399627685547,
+      "bi_encoder": {
+        "recall@10": 0.14084507042253522,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.14084507042253522,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-056",
+      "lang": "ar",
+      "topic": "parks",
+      "no_answer": false,
+      "best_rerank_score": 4.414916515350342,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-057",
+      "lang": "ar",
+      "topic": "roads",
+      "no_answer": false,
+      "best_rerank_score": 10.485786437988281,
+      "bi_encoder": {
+        "recall@10": 0.2,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.14,
+        "mrr@10": 0.25
+      }
+    },
+    {
+      "query_id": "Q-058",
+      "lang": "ar",
+      "topic": "lighting",
+      "no_answer": false,
+      "best_rerank_score": 9.42873764038086,
+      "bi_encoder": {
+        "recall@10": 0.19230769230769232,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.17307692307692307,
+        "mrr@10": 0.5
+      }
+    },
+    {
+      "query_id": "Q-059",
+      "lang": "ar",
+      "topic": "waste",
+      "no_answer": false,
+      "best_rerank_score": 8.322049140930176,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-060",
+      "lang": "ar",
+      "topic": "water",
+      "no_answer": false,
+      "best_rerank_score": 10.054972648620605,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-061",
+      "lang": "en",
+      "topic": "billing",
+      "no_answer": false,
+      "best_rerank_score": 4.958629131317139,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-062",
+      "lang": "en",
+      "topic": "digital_services",
+      "no_answer": false,
+      "best_rerank_score": 10.539811134338379,
+      "bi_encoder": {
+        "recall@10": 0.18867924528301888,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.18867924528301888,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-063",
+      "lang": "en",
+      "topic": "licensing",
+      "no_answer": false,
+      "best_rerank_score": 9.275644302368164,
+      "bi_encoder": {
+        "recall@10": 0.16393442622950818,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.16393442622950818,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-064",
+      "lang": "en",
+      "topic": "parks",
+      "no_answer": false,
+      "best_rerank_score": 10.9396333694458,
+      "bi_encoder": {
+        "recall@10": 0.30303030303030304,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.21212121212121213,
+        "mrr@10": 0.25
+      }
+    },
+    {
+      "query_id": "Q-065",
+      "lang": "en",
+      "topic": "roads",
+      "no_answer": false,
+      "best_rerank_score": 10.709919929504395,
+      "bi_encoder": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-066",
+      "lang": "en",
+      "topic": "lighting",
+      "no_answer": false,
+      "best_rerank_score": 10.934639930725098,
+      "bi_encoder": {
+        "recall@10": 0.2564102564102564,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.15384615384615385,
+        "mrr@10": 0.2
+      }
+    },
+    {
+      "query_id": "Q-067",
+      "lang": "en",
+      "topic": "waste",
+      "no_answer": false,
+      "best_rerank_score": 10.915201187133789,
+      "bi_encoder": {
+        "recall@10": 0.25,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-068",
+      "lang": "en",
+      "topic": "water",
+      "no_answer": false,
+      "best_rerank_score": 10.904016494750977,
+      "bi_encoder": {
+        "recall@10": 0.3448275862068966,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-069",
+      "lang": "en",
+      "topic": "billing",
+      "no_answer": false,
+      "best_rerank_score": 4.083673000335693,
+      "bi_encoder": {
+        "recall@10": 0.18518518518518517,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.18518518518518517,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-070",
+      "lang": "en",
+      "topic": "digital_services",
+      "no_answer": false,
+      "best_rerank_score": 10.528618812561035,
+      "bi_encoder": {
+        "recall@10": 0.18518518518518517,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.18518518518518517,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-071",
+      "lang": "en",
+      "topic": "licensing",
+      "no_answer": false,
+      "best_rerank_score": 9.409558296203613,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-072",
+      "lang": "en",
+      "topic": "parks",
+      "no_answer": false,
+      "best_rerank_score": 10.916872024536133,
+      "bi_encoder": {
+        "recall@10": 0.3125,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.125,
+        "mrr@10": 0.14285714285714285
+      }
+    },
+    {
+      "query_id": "Q-073",
+      "lang": "en",
+      "topic": "roads",
+      "no_answer": false,
+      "best_rerank_score": 10.894583702087402,
+      "bi_encoder": {
+        "recall@10": 0.2857142857142857,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.2571428571428571,
+        "mrr@10": 0.5
+      }
+    },
+    {
+      "query_id": "Q-074",
+      "lang": "en",
+      "topic": "lighting",
+      "no_answer": false,
+      "best_rerank_score": 10.93554401397705,
+      "bi_encoder": {
+        "recall@10": 0.2564102564102564,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.23076923076923078,
+        "mrr@10": 0.5
+      }
+    },
+    {
+      "query_id": "Q-075",
+      "lang": "en",
+      "topic": "waste",
+      "no_answer": false,
+      "best_rerank_score": 10.76565933227539,
+      "bi_encoder": {
+        "recall@10": 0.25,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.15,
+        "mrr@10": 0.2
+      }
+    },
+    {
+      "query_id": "Q-076",
+      "lang": "en",
+      "topic": "water",
+      "no_answer": false,
+      "best_rerank_score": 10.862996101379395,
+      "bi_encoder": {
+        "recall@10": 0.23809523809523808,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.19047619047619047,
+        "mrr@10": 0.3333333333333333
+      }
+    },
+    {
+      "query_id": "Q-077",
+      "lang": "en",
+      "topic": "billing",
+      "no_answer": false,
+      "best_rerank_score": 10.070982933044434,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-078",
+      "lang": "en",
+      "topic": "digital_services",
+      "no_answer": false,
+      "best_rerank_score": 10.822098731994629,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-079",
+      "lang": "en",
+      "topic": "licensing",
+      "no_answer": false,
+      "best_rerank_score": 10.781569480895996,
+      "bi_encoder": {
+        "recall@10": 0.6666666666666666,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.6666666666666666,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-080",
+      "lang": "en",
+      "topic": "parks",
+      "no_answer": false,
+      "best_rerank_score": 10.953150749206543,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-081",
+      "lang": "en",
+      "topic": "roads",
+      "no_answer": false,
+      "best_rerank_score": 10.899041175842285,
+      "bi_encoder": {
+        "recall@10": 0.2702702702702703,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.1891891891891892,
+        "mrr@10": 0.25
+      }
+    },
+    {
+      "query_id": "Q-082",
+      "lang": "en",
+      "topic": "lighting",
+      "no_answer": false,
+      "best_rerank_score": 10.93554401397705,
+      "bi_encoder": {
+        "recall@10": 0.2564102564102564,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.23076923076923078,
+        "mrr@10": 0.5
+      }
+    },
+    {
+      "query_id": "Q-083",
+      "lang": "en",
+      "topic": "waste",
+      "no_answer": false,
+      "best_rerank_score": 10.538481712341309,
+      "bi_encoder": {
+        "recall@10": 0.2777777777777778,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.16666666666666666,
+        "mrr@10": 0.2
+      }
+    },
+    {
+      "query_id": "Q-084",
+      "lang": "en",
+      "topic": "water",
+      "no_answer": false,
+      "best_rerank_score": 10.88428783416748,
+      "bi_encoder": {
+        "recall@10": 0.23809523809523808,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.07142857142857142,
+        "mrr@10": 0.125
+      }
+    },
+    {
+      "query_id": "Q-085",
+      "lang": "en",
+      "topic": "billing",
+      "no_answer": false,
+      "best_rerank_score": 10.23646354675293,
+      "bi_encoder": {
+        "recall@10": 0.03690036900369004,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.03690036900369004,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-086",
+      "lang": "en",
+      "topic": "digital_services",
+      "no_answer": false,
+      "best_rerank_score": 6.934194087982178,
+      "bi_encoder": {
+        "recall@10": 0.16129032258064516,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.16129032258064516,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-087",
+      "lang": "en",
+      "topic": "licensing",
+      "no_answer": false,
+      "best_rerank_score": 10.029644966125488,
+      "bi_encoder": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-088",
+      "lang": "en",
+      "topic": "parks",
+      "no_answer": false,
+      "best_rerank_score": 10.921520233154297,
+      "bi_encoder": {
+        "recall@10": 0.2777777777777778,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.2222222222222222,
+        "mrr@10": 0.3333333333333333
+      }
+    },
+    {
+      "query_id": "Q-089",
+      "lang": "en",
+      "topic": "roads",
+      "no_answer": false,
+      "best_rerank_score": 10.879487991333008,
+      "bi_encoder": {
+        "recall@10": 0.25,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.175,
+        "mrr@10": 0.25
+      }
+    },
+    {
+      "query_id": "Q-090",
+      "lang": "en",
+      "topic": "lighting",
+      "no_answer": false,
+      "best_rerank_score": 10.773783683776855,
+      "bi_encoder": {
+        "recall@10": 0.30303030303030304,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.15151515151515152,
+        "mrr@10": 0.16666666666666666
+      }
+    },
+    {
+      "query_id": "Q-091",
+      "lang": "en",
+      "topic": "waste",
+      "no_answer": false,
+      "best_rerank_score": 8.884584426879883,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-092",
+      "lang": "en",
+      "topic": "water",
+      "no_answer": false,
+      "best_rerank_score": 10.91092300415039,
+      "bi_encoder": {
+        "recall@10": 0.25,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.05,
+        "mrr@10": 0.1111111111111111
+      }
+    },
+    {
+      "query_id": "Q-093",
+      "lang": "en",
+      "topic": "billing",
+      "no_answer": false,
+      "best_rerank_score": 10.23646354675293,
+      "bi_encoder": {
+        "recall@10": 0.037037037037037035,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.037037037037037035,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-094",
+      "lang": "en",
+      "topic": "digital_services",
+      "no_answer": false,
+      "best_rerank_score": 10.310318946838379,
+      "bi_encoder": {
+        "recall@10": 0.17543859649122806,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.17543859649122806,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-095",
+      "lang": "en",
+      "topic": "licensing",
+      "no_answer": false,
+      "best_rerank_score": 10.458991050720215,
+      "bi_encoder": {
+        "recall@10": 0.16666666666666666,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.16666666666666666,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-096",
+      "lang": "en",
+      "topic": "parks",
+      "no_answer": false,
+      "best_rerank_score": 10.27241039276123,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-097",
+      "lang": "en",
+      "topic": "roads",
+      "no_answer": false,
+      "best_rerank_score": 10.862398147583008,
+      "bi_encoder": {
+        "recall@10": 0.2857142857142857,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.14285714285714285,
+        "mrr@10": 0.16666666666666666
+      }
+    },
+    {
+      "query_id": "Q-098",
+      "lang": "en",
+      "topic": "lighting",
+      "no_answer": false,
+      "best_rerank_score": 10.944586753845215,
+      "bi_encoder": {
+        "recall@10": 0.2777777777777778,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.05555555555555555,
+        "mrr@10": 0.1111111111111111
+      }
+    },
+    {
+      "query_id": "Q-099",
+      "lang": "en",
+      "topic": "waste",
+      "no_answer": false,
+      "best_rerank_score": 10.75056266784668,
+      "bi_encoder": {
+        "recall@10": 0.25,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.25,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-100",
+      "lang": "en",
+      "topic": "water",
+      "no_answer": false,
+      "best_rerank_score": 10.911009788513184,
+      "bi_encoder": {
+        "recall@10": 0.3333333333333333,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.1,
+        "mrr@10": 0.125
+      }
+    },
+    {
+      "query_id": "Q-101",
+      "lang": "en",
+      "topic": "billing",
+      "no_answer": false,
+      "best_rerank_score": 10.23646354675293,
+      "bi_encoder": {
+        "recall@10": 0.03690036900369004,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.03690036900369004,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-102",
+      "lang": "en",
+      "topic": "digital_services",
+      "no_answer": false,
+      "best_rerank_score": 8.86812973022461,
+      "bi_encoder": {
+        "recall@10": 0.18867924528301888,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.18867924528301888,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-103",
+      "lang": "en",
+      "topic": "licensing",
+      "no_answer": false,
+      "best_rerank_score": 8.408408164978027,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-104",
+      "lang": "en",
+      "topic": "parks",
+      "no_answer": false,
+      "best_rerank_score": 10.853107452392578,
+      "bi_encoder": {
+        "recall@10": 0.25,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.25,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-105",
+      "lang": "en",
+      "topic": "roads",
+      "no_answer": false,
+      "best_rerank_score": 10.864623069763184,
+      "bi_encoder": {
+        "recall@10": 0.2631578947368421,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.23684210526315788,
+        "mrr@10": 0.5
+      }
+    },
+    {
+      "query_id": "Q-106",
+      "lang": "en",
+      "topic": "lighting",
+      "no_answer": false,
+      "best_rerank_score": 10.915432929992676,
+      "bi_encoder": {
+        "recall@10": 0.2631578947368421,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.05263157894736842,
+        "mrr@10": 0.1111111111111111
+      }
+    },
+    {
+      "query_id": "Q-107",
+      "lang": "en",
+      "topic": "waste",
+      "no_answer": false,
+      "best_rerank_score": 10.777100563049316,
+      "bi_encoder": {
+        "recall@10": 0.2702702702702703,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.2702702702702703,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-108",
+      "lang": "en",
+      "topic": "water",
+      "no_answer": false,
+      "best_rerank_score": 10.904016494750977,
+      "bi_encoder": {
+        "recall@10": 0.3448275862068966,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-109",
+      "lang": "en",
+      "topic": "billing",
+      "no_answer": false,
+      "best_rerank_score": 3.883646011352539,
+      "bi_encoder": {
+        "recall@10": 0.17857142857142858,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.17857142857142858,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-110",
+      "lang": "en",
+      "topic": "digital_services",
+      "no_answer": false,
+      "best_rerank_score": 10.368332862854004,
+      "bi_encoder": {
+        "recall@10": 0.16666666666666666,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.16666666666666666,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-111",
+      "lang": "en",
+      "topic": "licensing",
+      "no_answer": false,
+      "best_rerank_score": 9.845314025878906,
+      "bi_encoder": {
+        "recall@10": 0.19230769230769232,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.17307692307692307,
+        "mrr@10": 0.5
+      }
+    },
+    {
+      "query_id": "Q-112",
+      "lang": "en",
+      "topic": "parks",
+      "no_answer": false,
+      "best_rerank_score": 10.91907787322998,
+      "bi_encoder": {
+        "recall@10": 0.2777777777777778,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.1111111111111111,
+        "mrr@10": 0.14285714285714285
+      }
+    },
+    {
+      "query_id": "Q-113",
+      "lang": "en",
+      "topic": "roads",
+      "no_answer": false,
+      "best_rerank_score": 10.862398147583008,
+      "bi_encoder": {
+        "recall@10": 0.2857142857142857,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.14285714285714285,
+        "mrr@10": 0.16666666666666666
+      }
+    },
+    {
+      "query_id": "Q-114",
+      "lang": "en",
+      "topic": "lighting",
+      "no_answer": false,
+      "best_rerank_score": 10.937605857849121,
+      "bi_encoder": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.28,
+        "mrr@10": 0.25
+      }
+    },
+    {
+      "query_id": "Q-115",
+      "lang": "en",
+      "topic": "waste",
+      "no_answer": false,
+      "best_rerank_score": 10.883488655090332,
+      "bi_encoder": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.4,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-116",
+      "lang": "en",
+      "topic": "water",
+      "no_answer": false,
+      "best_rerank_score": 10.63845157623291,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-117",
+      "lang": "en",
+      "topic": "billing",
+      "no_answer": false,
+      "best_rerank_score": 10.21097183227539,
+      "bi_encoder": {
+        "recall@10": 0.625,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.625,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-118",
+      "lang": "en",
+      "topic": "digital_services",
+      "no_answer": false,
+      "best_rerank_score": 9.805130958557129,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-119",
+      "lang": "en",
+      "topic": "licensing",
+      "no_answer": false,
+      "best_rerank_score": 10.664423942565918,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-120",
+      "lang": "en",
+      "topic": "parks",
+      "no_answer": false,
+      "best_rerank_score": 10.939770698547363,
+      "bi_encoder": {
+        "recall@10": 0.30303030303030304,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.12121212121212122,
+        "mrr@10": 0.14285714285714285
+      }
+    },
+    {
+      "query_id": "Q-121",
+      "lang": "en",
+      "topic": "roads",
+      "no_answer": false,
+      "best_rerank_score": 10.862398147583008,
+      "bi_encoder": {
+        "recall@10": 0.2857142857142857,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.14285714285714285,
+        "mrr@10": 0.16666666666666666
+      }
+    },
+    {
+      "query_id": "Q-122",
+      "lang": "en",
+      "topic": "lighting",
+      "no_answer": false,
+      "best_rerank_score": 10.839433670043945,
+      "bi_encoder": {
+        "recall@10": 0.2702702702702703,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.05405405405405406,
+        "mrr@10": 0.1111111111111111
+      }
+    },
+    {
+      "query_id": "Q-123",
+      "lang": "en",
+      "topic": "waste",
+      "no_answer": false,
+      "best_rerank_score": 10.538481712341309,
+      "bi_encoder": {
+        "recall@10": 0.2777777777777778,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.16666666666666666,
+        "mrr@10": 0.2
+      }
+    },
+    {
+      "query_id": "Q-124",
+      "lang": "en",
+      "topic": "water",
+      "no_answer": false,
+      "best_rerank_score": 10.793011665344238,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-125",
+      "lang": "en",
+      "topic": "billing",
+      "no_answer": false,
+      "best_rerank_score": 3.883646011352539,
+      "bi_encoder": {
+        "recall@10": 0.17857142857142858,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.17857142857142858,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-126",
+      "lang": "en",
+      "topic": "digital_services",
+      "no_answer": false,
+      "best_rerank_score": 6.934194087982178,
+      "bi_encoder": {
+        "recall@10": 0.16393442622950818,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.16393442622950818,
+        "mrr@10": 1.0
+      }
+    },
+    {
+      "query_id": "Q-127",
+      "lang": "en",
+      "topic": "licensing",
+      "no_answer": false,
+      "best_rerank_score": 10.082839012145996,
+      "bi_encoder": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      },
+      "reranked": {
+        "recall@10": 0.0,
+        "mrr@10": 0.0
+      }
+    },
+    {
+      "query_id": "Q-128",
+      "lang": "en",
+      "topic": "parks",
+      "no_answer": false,
+      "best_rerank_score": 10.886824607849121,
+      "bi_encoder": {
+        "recall@10": 0.3125,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.15625,
+        "mrr@10": 0.16666666666666666
+      }
+    },
+    {
+      "query_id": "Q-129",
+      "lang": "en",
+      "topic": "roads",
+      "no_answer": false,
+      "best_rerank_score": 10.87000560760498,
+      "bi_encoder": {
+        "recall@10": 0.25,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.25,
+        "mrr@10": 0.5
+      }
+    },
+    {
+      "query_id": "Q-130",
+      "lang": "en",
+      "topic": "lighting",
+      "no_answer": false,
+      "best_rerank_score": 10.810921669006348,
+      "bi_encoder": {
+        "recall@10": 0.625,
+        "mrr@10": 1.0
+      },
+      "reranked": {
+        "recall@10": 0.625,
+        "mrr@10": 0.5
+      }
+    },
+    {
+      "query_id": "Q-131",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-132",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-133",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-134",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-135",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-136",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-137",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-138",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-139",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-140",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-141",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-142",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-143",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-144",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-145",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-146",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-147",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-148",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-149",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    },
+    {
+      "query_id": "Q-150",
+      "lang": "en",
+      "topic": "no_answer",
+      "no_answer": true,
+      "best_rerank_score": -5.581108570098877,
+      "bi_encoder": {
+        "recall@10": null,
+        "mrr@10": null
+      },
+      "reranked": {
+        "recall@10": null,
+        "mrr@10": null
+      }
+    }
+  ]
+}
