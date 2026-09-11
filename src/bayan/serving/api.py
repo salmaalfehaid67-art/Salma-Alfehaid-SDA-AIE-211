@@ -83,11 +83,21 @@ def health():
 
 @app.post("/v1/classify")
 def classify(payload: TextRequest):
-    if session is None:
+  if session is None:
+    cleaned = preprocess(payload.text)
+
+    if not cleaned:
         raise HTTPException(
-            status_code=503,
-            detail="Classifier is not loaded",
+            status_code=400,
+            detail="Text must not be empty",
         )
+
+    return {
+        "text": payload.text,
+        "cleaned_text": cleaned,
+        "label": "UNKNOWN",
+        "confidence": 0.0,
+    }
 
     cleaned = preprocess(payload.text)
 
