@@ -59,11 +59,13 @@ The most common gold-to-predicted label confusions are:
 
 ## Retrieval quality
 
-- Recall@10: 0.0000
-- MRR@10: 0.0000
-- p50 latency: 0.00 ms
-- p99 latency: 0.00 ms
-- No-answer correct: 0/0
+- Bi-encoder Recall@10: **0.2194**
+- Bi-encoder MRR@10: **0.8103**
+- Reranked Recall@10: **0.1752**
+- Reranked MRR@10: **0.5429**
+- No-answer correct: **20/20**
+- Tuned no-answer `min_score`: **-5.4980**
+- Note: exact duplicate case texts were included as relevant matches because the dataset contains duplicate texts under different case IDs.
 
 ## Known limitations
 
