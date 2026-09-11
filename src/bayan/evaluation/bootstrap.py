@@ -33,7 +33,7 @@ def paired_bootstrap_diff(a, b, *, n_boot=2000, seed=42, alpha=0.05):
     if len(a) != len(b):
         raise ValueError("paired inputs must have equal length")
 
-    diff = b - a
+    diff = a-b
     delta = float(np.mean(diff))
 
     rng = np.random.default_rng(seed)
